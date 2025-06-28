@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #232527;
+}
+header {
+    background-color: #191b1d;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 42px;
+}
+
+.logo{
+    margin-right: 17px;
+}
+
+#signup{
+    position: fixed;
+    right: 80px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #00b06f;
+    color: white;
+}
+
+#signin{
+    position: fixed;
+    right:8px;
+    font-size:15px;
+    background-color: transparent;
+    border: 1px solid #c1c1c1;
+
+}
+
+#signin:hover{
+    border: 1px solid #ffffff;
+}
+
+nav a:nth-child(1) {
+    margin-right: 70px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+nav a:nth-child(2) {
+    margin-right: 70px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+nav a:nth-child(3) {
+    margin-right: 70px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+nav a:nth-child(4) {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* 밑줄 두께 설정 */
+    text-underline-position: under
+}
+
+
+
+#chart{
+    margin-left: 20px;
+}
+
+
+input {
+    width: 390px;
+    background-color: #0a0b0c;
+    border: 1px solid #3b3c3d;
+    border-radius: 10px;
+    outline: none;
+    caret-color: white;
+    height: 40px;
+    color: white;
+}
+
+input::placeholder{
+    color: #636565;
+}
+
+.login-container {
+    background-color: #393b3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    height: 60%;
+    max-width: 400px;  /* 최대 너비 제한 */
+    text-align: center;
+
+    /* 로그인 폼을 중앙에 정렬하기 위해 flexbox 사용 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+@media (max-width: 968px) {
+    /* 네비게이션을 세로로 배치 */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav a:nth-child(1) {
+        margin-right: 5vw;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+    }
+    nav a:nth-child(2) {
+        margin-right: 5vw;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+    }
+    nav a:nth-child(3) {
+        margin-right: 5vw;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+    }
+    nav a:nth-child(4) {
+        margin-right: 5vw;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+    }
+    #searchBox {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* 버튼을 아래로 배치 */
+    #signup, #signin {
+        margin-top: 10px;
+    }
+
+    .login-container {
+        background-color: #393b3d;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        height: 60%;
+        max-width: 400px;  /* 최대 너비 제한 */
+        text-align: center;
+    
+        /* 로그인 폼을 중앙에 정렬하기 위해 flexbox 사용 */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    
+}
+
+@media (max-width: 564px) {
+    .login-container {
+        background-color: #393b3d;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        height: 60%;
+        max-width: 400px;  /* 최대 너비 제한 */
+        text-align: center;
+    
+        /* 로그인 폼을 중앙에 정렬하기 위해 flexbox 사용 */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    
+}
+
+
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input-group input:focus {
+    outline: none;
+    border: 1px solid white;
+}
+
+.output {
+    display: none; /* 기본적으로 숨김 */
+    margin-top: 10px;
+    background-color: #fff;
+    color:#232527;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 390px;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1000;
+}
+
+.login-btn {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #c1c1c1;
+    height: 40px;
+}
+
+.login-btn:hover{
+    border: 1px solid #ffffff;
+}
+
+
+.login-btn:hover {
+    color: #ffffff;
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #777;
+}
+
+.signup-link a {
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
